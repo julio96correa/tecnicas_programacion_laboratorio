@@ -65,6 +65,20 @@
                     <target>17</target>
                 </configuration>
             </plugin>
+
+                <plugin>
+                    <groupId>org.jetbrains.dokka</groupId>
+                    <artifactId>dokka-maven-plugin</artifactId>
+                    <version>1.9.0</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>dokka</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
         </plugins>
     </build>
     <dependencies>

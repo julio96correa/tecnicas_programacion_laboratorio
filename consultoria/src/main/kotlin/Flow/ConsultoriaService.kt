@@ -3,7 +3,18 @@ package Flow
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
-class Consultoria{
+/**
+ * Servicio para calcular el costo total de un proyecto de consultoría.
+ */
+class ConsultoriaService {
+    /**
+     * Calcula el costo total del proyecto.
+     *
+     * @param costos Costos del proyecto.
+     * @param gastos Gastos adicionales del proyecto.
+     * @param porcentajeRiesgos Porcentaje de riesgos aplicados.
+     * @return Un `Flow` que emite un `CostoProyecto` con el cálculo total.
+     */
     fun calcularCostoTotal(costos: Costos, gastos: Gastos, porcentajeRiesgos: Double): Flow<CostoProyecto> {
         return flow {
             val totalCostos = costos.esfuerzo + costos.viaticos + costos.infraestructura
